@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Men's fashion e-commerce store with trendy clothing and accessories from TT Fashion.">
+    <title>Home - TT Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- Try this fallback URL if logo.png fails: -->
+                <img src="C:\Users\tantr\OneDrive\Hình ảnh\Camera Roll\image.jpg" alt="TT Fashion Logo" width="50" onerror="this.src='https://via.placeholder.com/50'; console.log('Logo failed, using placeholder');">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TT Fashion</title>
+    <!-- Bootstrap CSS for styling (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1>Welcome to TT Fashion</h1>
+        <p id="tagline">Nơi quý ông tìm lại chính mình</p>
+    </header>
+
+    <script>
+        const taglines = [
+            "Nơi quý ông tìm lại chính mình",
+            "Phong cách dành riêng cho bạn",
+            "Tinh tế trong từng đường may",
+            "Khám phá đỉnh cao thời trang"
+        ];
+
+        let currentIndex = 0;
+        const taglineElement = document.getElementById("tagline");
+
+        function changeTagline() {
+            // Add fade-out effect
+            taglineElement.classList.add("fade-out");
+
+            setTimeout(() => {
+                // Update text after fade-out
+                currentIndex = (currentIndex + 1) % taglines.length;
+                taglineElement.textContent = taglines[currentIndex];
+
+                // Fade back in
+                taglineElement.classList.remove("fade-out");
+                taglineElement.classList.add("fade-in");
+            }, 1000); // Match the transition duration
+        }
+
+        // Change tagline every 3 seconds
+        setInterval(changeTagline, 3000);
+
+        // Initialize with fade-in
+        taglineElement.classList.add("fade-in");
+    </script>
+</body>
+</html>
+
+    <section class="container my-5">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\tantr\OneDrive\Hình ảnh\Camera Roll\9da27bc4c6910685e7e19b368218ae18.jpg" class="card-img-top" alt="Men's Blue T-Shirt" onerror="console.log('T-Shirt image failed');">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Blue T-Shirt</h5>
+                        <p class="card-text">$19.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Men's Blue T-Shirt" data-price="19.99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\tantr\OneDrive\Hình ảnh\Camera Roll\480da8e4be57534a4c49a5a8e5710310.jpg" class="card-img-top" alt="Men's Slim Fit Jeans" onerror="console.log('Jeans image failed');">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Slim Fit Jeans</h5>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Men's Slim Fit Jeans" data-price="39.99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\tantr\OneDrive\Hình ảnh\Camera Roll\5762e7b853030df4ed346844b99e3f62.jpg" class="card-img-top" alt="Men's Leather Jacket" onerror="console.log('Jacket image failed');">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Leather Jacket</h5>
+                        <p class="card-text">$79.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product="Men's Leather Jacket" data-price="79.99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 TT Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
